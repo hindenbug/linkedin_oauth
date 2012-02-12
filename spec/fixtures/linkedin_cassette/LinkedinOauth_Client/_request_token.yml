@@ -1,0 +1,33 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: https://api.linkedin.com:443/uas/oauth/requestToken
+    body: 
+    headers:
+      user-agent:
+      - OAuth gem v0.4.5
+      content-length:
+      - '0'
+      authorization:
+      - OAuth oauth_body_hash="2jmj7l5rSw0yVb%2FvlWAYkK%2FYBwk%3D", oauth_callback="http%3A%2F%2F127.0.0.1",
+        oauth_consumer_key="d3gwgd41i0mt", oauth_nonce="jyS7D2vGzNhKhGMQZJixk1pxateKq8kyKY76aufdN90",
+        oauth_signature="vPGm%2FpqIoXSZM3Y7p2MtYPPaf5Y%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1329068713", oauth_version="1.0"
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      content-type:
+      - text/plain
+      content-length:
+      - '236'
+      vary:
+      - Accept-Encoding
+      date:
+      - Sun, 12 Feb 2012 17:45:12 GMT
+    body: oauth_token=a2a15d8a-54b3-40ca-a2da-c5ea38fa93f1&oauth_token_secret=fa0e5633-f48b-41b4-8278-8a430a2f7cf5&oauth_callback_confirmed=true&xoauth_request_auth_url=https%3A%2F%2Fapi.linkedin.com%2Fuas%2Foauth%2Fauthorize&oauth_expires_in=599
+    http_version: '1.1'

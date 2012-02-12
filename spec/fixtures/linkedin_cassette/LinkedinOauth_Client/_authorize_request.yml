@@ -1,0 +1,38 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: https://api.linkedin.com:443/uas/oauth/accessToken
+    body: 
+    headers:
+      user-agent:
+      - OAuth gem v0.4.5
+      content-length:
+      - '0'
+      authorization:
+      - OAuth oauth_body_hash="2jmj7l5rSw0yVb%2FvlWAYkK%2FYBwk%3D", oauth_consumer_key="d3gwgd41i0mt",
+        oauth_nonce="Dp3qNySyZZGkaHmGAb2RULgsBsxioEeykE2JA1koGPY", oauth_signature="mzJ7c0zzveaGcHLPkf19SodRPy4%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1329068925", oauth_token="rtoken",
+        oauth_version="1.0"
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 400
+      message: Bad Request
+    headers:
+      server:
+      - Apache-Coyote/1.1
+      www-authenticate:
+      - OAuth realm="https%3A%2F%2Fapi.linkedin.com", oauth_problem="parameter_absent",
+        oauth_parameters_absent="oauth_verifier"
+      content-type:
+      - application/x-www-form-urlencoded;charset=UTF-8
+      content-length:
+      - '69'
+      vary:
+      - Accept-Encoding
+      date:
+      - Sun, 12 Feb 2012 17:48:44 GMT
+      nncoection:
+      - close
+    body: oauth_problem=parameter_absent&oauth_parameters_absent=oauth_verifier
+    http_version: '1.1'
